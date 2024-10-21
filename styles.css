@@ -1,0 +1,119 @@
+body {
+    background: linear-gradient(to bottom, #0d0221, #13014a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    overflow: hidden;
+    position: relative;
+}
+
+.waterfall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.code {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    color: #00ff00;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 16px;
+    line-height: 16px;
+    animation: fall linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes fall {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
+
+.arcade-container {
+    background-color: #1c0046;
+    border: 3px solid #ff00ff;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+    animation: neon-glow 1.5s infinite alternate;
+}
+
+.arcade-container h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #ff4081;
+    text-shadow: 2px 2px 0 #ff80ab, -2px -2px 0 #ff4081;
+    margin-bottom: 30px;
+}
+
+.arcade-container input {
+    background-color: #13014a;
+    border: 3px solid #ff00ff;
+    color: #fff;
+    padding: 10px;
+    width: 80%;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+}
+
+.arcade-container input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.arcade-container .button-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+.arcade-container button {
+    background-color: #ff0066;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 5px #ff0066, 0 0 10px #ff0066;
+    transition: all 0.3s ease;
+}
+
+.arcade-container button:hover {
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066;
+    transform: translateY(-5px);
+}
+
+.arcade-container button:nth-child(1) {
+    background-color: #00b0ff;
+}
+
+.arcade-container button:nth-child(1):hover {
+    box-shadow: 0 0 10px #00b0ff, 0 0 20px #00b0ff;
+}
+
+.arcade-container button:nth-child(2) {
+    background-color: #ff1744;
+}
+
+.arcade-container button:nth-child(2):hover {
+    box-shadow: 0 0 10px #ff1744, 0 0 20px #ff1744;
+}
